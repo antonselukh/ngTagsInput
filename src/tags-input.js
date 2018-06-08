@@ -25,6 +25,7 @@
  * @param {boolean=} [allowLeftoverText=false] Sets leftoverText validation error key if there is any leftover text in
  *    the input element when the directive loses focus.
  * @param {string=} [removeTagSymbol=×] (Obsolete) Symbol character for the remove tag button.
+ * @param {boolean=} [isRemoveButtonDisabled=false] Disable remove tag button.
  * @param {boolean=} [addOnEnter=true] Flag indicating that a new tag will be added on pressing the ENTER key.
  * @param {boolean=} [addOnSpace=false] Flag indicating that a new tag will be added on pressing the SPACE key.
  * @param {boolean=} [addOnComma=true] Flag indicating that a new tag will be added on pressing the COMMA key.
@@ -183,6 +184,7 @@ export default function TagsInputDirective($timeout, $document, $window, $q, tag
         placeholder: [String, 'Add a tag'],
         tabindex: [Number, null],
         removeTagSymbol: [String, String.fromCharCode(215)],
+        isRemoveButtonDisabled: [Boolean, false],
         replaceSpacesWithDashes: [Boolean, true],
         minLength: [Number, 3],
         maxLength: [Number, tiConstants.MAX_SAFE_INTEGER],

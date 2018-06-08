@@ -23,6 +23,7 @@ export default function TagItemDirective(tiUtil) {
 
       scope.$$template = options.template;
       scope.$$removeTagSymbol = options.removeTagSymbol;
+      scope.$$isRemoveButtonDisabled = options.removeTagSymbol
 
       scope.$getDisplayText = () => tiUtil.safeToString(scope.data[options.displayProperty]);
       scope.$removeTag = () => {
